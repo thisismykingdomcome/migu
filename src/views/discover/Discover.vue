@@ -5,7 +5,7 @@
       <header>
          <div class="head">
             <span class="top">发现</span>
-            <a href="#">
+            <a href="/search">
                <img class="searchBtn" src="../../../public/imgers/icon/search-btn.png" alt="" />
             </a>
          </div>
@@ -27,9 +27,9 @@
 
 <script>
 import Vuex from 'vuex';
-import discoverBanner from '@components/discover_banner/banner'
-import discoverShop from '@components/discover_shop/shop'
-import discoverInformation from '@components/discover_information/information'
+import discoverBanner from '@components/discover/discover_banner/banner'
+import discoverShop from '@components/discover/discover_shop/shop'
+import discoverInformation from '@components/discover/discover_information/information'
 export default {
     name:"Discover",
     components:{
