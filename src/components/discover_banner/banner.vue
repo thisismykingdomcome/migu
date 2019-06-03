@@ -13,23 +13,10 @@
         <!-- 模块一菜单栏 -->
         <div class="banner_menu">
             <ul class="clearfix">
-                <li class="pull-left">
-                    <img src="http://movie.miguvideo.com/publish/i_www/image/70/175/960.png" alt="">
-                    <span class="block font-15 grey">资讯</span>
-                </li>
-                <li class="pull-left">
-                    <img src="http://movie.miguvideo.com/publish/i_www/image/70/175/961.png" alt="">
-                    <span class="block font-15 grey">话题</span>
-                </li>
-                <li class="pull-left"><img src="http://movie.miguvideo.com/publish/i_www/image/70/175/961.png" alt="">
-                    <span class="block font-15 grey">约票</span>
-                </li>
-                <li class="pull-left"><img src="http://movie.miguvideo.com/publish/i_www/image/70/175/961.png" alt="">
-                    <span class="block font-15 grey">商城</span>
-                </li>
-                <li class="pull-left"><img src="http://movie.miguvideo.com/publish/i_www/image/70/175/961.png" alt="">
-                    <span class="block font-15 grey">活动</span>
-                </li>
+                <router-link v-for="(item,index) in menus" :key="index" :to="item.path" tag="li">
+                    <img :src="item.iconimg" alt="">
+                    <span>{{item.title}}</span>
+                </router-link>
             </ul>
         </div>
     </div>
@@ -40,7 +27,37 @@
 import Vuex from 'vuex'
 export default {
     name:"discoverBanner",
-
+     data(){
+        return {
+            menus:[
+                    {
+                        title:"资讯",
+                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/960.png",
+                        path:"/"
+                    },
+                    {
+                        title:"话题",
+                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/961.png",
+                        path:"/"
+                    },
+                    {
+                        title:"约票",
+                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/949.png",
+                        path:"/"
+                    },
+                    {
+                        title:"商城",
+                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/962.png",
+                        path:"/shopping"
+                    },
+                    {
+                        title:"活动",
+                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/966.png",
+                        path:"/"
+                    }
+                ]
+        }
+    },
 }
 </script>
 

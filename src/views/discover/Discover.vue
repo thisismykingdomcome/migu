@@ -6,7 +6,7 @@
          <div class="head">
             <span class="top">发现</span>
             <a href="#">
-               <img class="searchBtn" src="http://movie.miguvideo.com/lovev/miguMovie/images/icon/search-btn.png" alt="" />
+               <img class="searchBtn" src="../../../public/imgers/icon/search-btn.png" alt="" />
             </a>
          </div>
       </header> 
