@@ -3,7 +3,7 @@
     <header>
         <div class="head">
             <router-link to="/discover" tag="i">
-                <img class="backBtn" src="../../../public/imgers/icon/hisBack.png" alt="" />
+                <img class="backBtn" src="../../../../public/imgers/icon/hisBack.png" alt="" />
             </router-link>
             <span class="top">{{title}}</span> 
         </div>
@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import Vuex from 'vuex'
 export default {
     name:'discoverBack',
    

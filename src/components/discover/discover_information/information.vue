@@ -8,9 +8,9 @@
                   <!-- 资讯模块详情头部 -->
                   <div class="module_name">
                      <span>资讯</span>
-                     <a href="#">
+                     <router-link href="#" to="/informations" tag="a"> 
                         <span class="information_enter"></span>
-                     </a>
+                     </router-link>
                   </div>
                   <!-- 资讯模块详情内容 -->
                   <div class="module_content">
@@ -85,13 +85,13 @@ export default {
 .module_name{
     height: 0.9rem;
     line-height: 0.9rem;
-    background: url(../../../public/imgers/icon/module-icon.png) no-repeat 0 0.22rem;
+    background: url(../../../../public/imgers/icon/module-icon.png) no-repeat 0 0.22rem;
     background-size: 0.06rem 0.46rem;
     padding-left: 0.16rem;
     padding-right: 12px;
     font-size: 0.32rem;
     .information_enter{
-        background: url(../../../public/imgers/icon/moreCon.png) no-repeat 0 0.32rem;
+        background: url(../../../../public/imgers/icon/moreCon.png) no-repeat 0 0.32rem;
         display: block;
         float: right;
         background-size: 0.12rem 0.24rem;

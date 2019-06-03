@@ -116,7 +116,7 @@
 
 <script>
 import Vuex from 'vuex'
-import back from '@components/discover_back/back'
+import back from '@components/discover/discover_back/back'
 
 export default {
     name:'shopping',

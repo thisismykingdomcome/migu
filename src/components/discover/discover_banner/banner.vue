@@ -33,7 +33,7 @@ export default {
                     {
                         title:"资讯",
                         iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/960.png",
-                        path:"/"
+                        path:"/informations"
                     },
                     {
                         title:"话题",

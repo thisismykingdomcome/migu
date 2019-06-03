@@ -2,8 +2,13 @@ import Vue from 'vue'
 import Router from "vue-router";
 import discover from "./discover"
 import discoverShopping from './shopping'
+<<<<<<< HEAD
 import homePage from "./homePage/index"
 
+=======
+import search from './search'
+import informations from './informations'
+>>>>>>> lqd
 Vue.use(Router)
 
 export default new Router({
@@ -15,6 +20,11 @@ export default new Router({
     },
     discover,
     discoverShopping,
+<<<<<<< HEAD
     homePage
+=======
+    search,
+    informations
+>>>>>>> lqd
   ]
 })
