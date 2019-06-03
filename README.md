@@ -1,4 +1,4 @@
-# 咪咕影院
+# maoyan
 
 ## 技术要点
 ```
@@ -14,7 +14,11 @@
 10、封装JS组件
 11、封装UI组件
 12、sass 
-13、axios
 
+
+cnpm install better-scroll swiper mint-ui vue-touch@next -S
+
+
+cnpm install vue-lazyload -D
 ```
 
