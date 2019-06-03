@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from "vue-router";
 import discover from "./discover"
-
+import homePage from "./homePage/index"
 Vue.use(Router)
 
 export default new Router({
@@ -9,8 +9,9 @@ export default new Router({
   routes: [
     {
       path:"/",
-      redirect:"/discover"
+      redirect:"/FP/mainContent"
     },
-    discover
+    discover,
+    homePage
   ]
 })
