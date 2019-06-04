@@ -12,11 +12,7 @@ export default new Router({
   routes: [
     {
       path:"/",
-<<<<<<< HEAD
-      redirect:"/shopping"
-=======
       redirect:"/FP"
->>>>>>> zdw
     },
     discover,
     discoverShopping,

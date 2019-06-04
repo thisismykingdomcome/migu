@@ -80,10 +80,7 @@ import BScroll from "better-scroll"
 export default {
     name:"WatchMovie",
     components: {
-<<<<<<< HEAD
-=======
-      
->>>>>>> zdw
+
     },
     mounted(){
         let FP = document.querySelector("#zzz");
