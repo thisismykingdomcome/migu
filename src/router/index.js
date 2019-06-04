@@ -5,11 +5,11 @@ import homePage from "./homePage/index"
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   routes: [
     {
       path:"/",
-      redirect:"/FP/mainContent"
+      redirect:"/FP"
     },
     discover,
     homePage

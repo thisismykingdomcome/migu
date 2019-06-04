@@ -3,9 +3,9 @@
     <div id="watchMovie">
         <div class="loopPic">
             <ul>
-                <li><a href="#"><img src="../../../public/Camera Roll/fate28.jpeg" alt=""><span>哈哈哈哈</span></a></li>
-                <li><a href="#"><img src="../../../public/Camera Roll/fate28.jpeg" alt=""><span>撒地方卡萨打发</span></a></li>
-                <li><a href="#"><img src="../../../public/Camera Roll/fate28.jpeg" alt=""><span>阿斯顿发送到发生</span></a></li>
+                <li><a href="#"><img src="../../../public/imgers/img-zdw/fate28.jpeg" alt=""><span>哈哈哈哈</span></a></li>
+                <li><a href="#"><img src="../../../public/imgers/img-zdw/fate28.jpeg" alt=""><span>撒地方卡萨打发</span></a></li>
+                <li><a href="#"><img src="../../../public/imgers/img-zdw/fate28.jpeg" alt=""><span>阿斯顿发送到发生</span></a></li>
             </ul>
         </div> 
         <div id="two">
@@ -13,31 +13,36 @@
                 <div>
                     <ul>
                         <li><a href="">
-                            <img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                            <img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                             <p>撒大声地撒地方撒大</p>
                             <p>阿士大夫撒打算的发生</p>
                             </a>
                         </li>
-                        <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                        <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                             <p>撒大声地撒地方撒大</p>
                             <p>阿士大夫撒打算的发生</p>
-                        </a></li>
-                        <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                            </a>
+                        </li>
+                        <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                             <p>撒大声地撒地方撒大</p>
                             <p>阿士大夫撒打算的发生</p>
-                        </a></li>
-                        <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                            </a>
+                        </li>
+                        <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                             <p>撒大声地撒地方撒大</p>
                             <p>阿士大夫撒打算的发生</p>
-                        </a></li>
-                        <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                            </a>
+                        </li>
+                        <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                             <p>撒大声地撒地方撒大</p>
                             <p>阿士大夫撒打算的发生</p>
-                        </a></li>
-                        <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                            </a>
+                        </li>
+                        <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                             <p>撒大声地撒地方撒大</p>
                             <p>阿士大夫撒打算的发生</p>
-                        </a></li>
+                            </a>
+                        </li>
                     </ul>
                 </div>
         </div>
@@ -45,21 +50,21 @@
             <h1>正在售票</h1>
             <div>
                 <ul>
-                    <li><a href="">
-                        <img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href="#">
+                        <img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                         </a>
                     </li>
-                    <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                     </a></li>
-                    <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                     </a></li>
-                    <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                     </a></li>
@@ -75,7 +80,7 @@ import BScroll from "better-scroll"
 export default {
     name:"WatchMovie",
     components: {
-        Top
+      
     },
     mounted(){
         let FP = document.querySelector("#zzz");

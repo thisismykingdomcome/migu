@@ -4,33 +4,63 @@
         <div id="one">
             <div class="one">
                 <ul>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate02.jpeg" alt=""></a></li>
+                    <li><a href="#" ><img src="'http://movie.miguvideo.com/publish/i_www'+this.$store.state.zdw.mainData[0].list[0].imgSrc" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
                 </ul>
             </div>
         </div>
         <div id="two">
             <h1>正在售票</h1>
-            <div>
+            <div id="better">
                 <ul>
-                    <li><a href="">
-                        <img src="../../../public/Camera Roll/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                        </a>
-                    </li>
-                    <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                     </a></li>
-                    <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                     </a></li>
-                    <li><a href=""><img src="../../../public/Camera Roll/fate11.jpg" alt="">
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
+                        <p>撒大声地撒地方撒大</p>
+                        <p>阿士大夫撒打算的发生</p>
+                    </a></li>
+                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
                         <p>撒大声地撒地方撒大</p>
                         <p>阿士大夫撒打算的发生</p>
                     </a></li>
@@ -39,29 +69,45 @@
         </div>
         <div id="three">
             <h1>精彩活动</h1>
-            <div>
+            <div id="better1">
                 <ul>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate37.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate37.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/Camera Roll/fate37.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate37.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate37.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate37.jpg" alt=""></a></li>
                 </ul>
             </div>
         </div>
-        <div id="four"></div>
-        <div id="five"></div>
-        <div id="six"></div>     -->
+         
 
     </div>
 </div>
 </template>
 <script>
+import Vuex from "vuex"
 import BScroll from "better-scroll"
 import mainContent from "../../api/mainContent"
 export default {
     name:"mainContent",
+    created(){
+        this.actionsMain()
+    },
     mounted(){
         let FP = document.querySelector("#zzz");
-        let scroll =new BScroll(FP)
+        let scroll = new BScroll(FP);
+        let better =document.querySelector('#better');
+        let scroll1 = new BScroll(better,{
+            scrollX:true
+        })
+        let better1 =document.querySelector('#better1');
+        let scroll2 = new BScroll(better1,{
+            scrollX:true
+        });  
+        //console.log(this.$store.state.zdw.mainData[0][0].list)
+    },
+    methods: {
+        ...Vuex.mapActions({
+            actionsMain:"zdw/actionsMainOne"
+        })
     }
 }
 </script>
@@ -69,10 +115,11 @@ export default {
 #zzz{
     width:100%;
     overflow: hidden;
-    height:14rem
+    height:11.7rem;
+    margin-top:1.67rem
 }
 #main{
-    margin-top:1.6rem;
+    margin-top:1.67rem;
     width:100%;
     
     background:#efefef;
@@ -119,6 +166,7 @@ export default {
 }
 #two ul{
     display: flex;
+    width:28.12512rem
 }
 #two ul li p{
     width:100%;
@@ -139,9 +187,19 @@ export default {
     width:100%;
     overflow: hidden;
 }
+#three ul{
+    overflow: hidden;
+    display: flex;
+    width:22.5rem;
+}
 #three ul li{
     float:left;
     width:7.5rem;
+        flex-shrink: 0
+}
+#three ul li img{
+    width:100%;
+    border:none;
 }
 </style>
 
