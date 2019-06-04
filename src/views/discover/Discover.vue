@@ -5,8 +5,13 @@
       <header>
          <div class="head">
             <span class="top">发现</span>
+<<<<<<< HEAD
             <a href="/search">
                <img class="searchBtn" src="../../../public/imgers/icon/search-btn.png" alt="" />
+=======
+            <a href="#">
+               <img class="searchBtn" src="http://movie.miguvideo.com/lovev/miguMovie/images/icon/search-btn.png" alt="" />
+>>>>>>> tsh
             </a>
          </div>
       </header> 
@@ -27,9 +32,15 @@
 
 <script>
 import Vuex from 'vuex';
+<<<<<<< HEAD
 import discoverBanner from '@components/discover/discover_banner/banner'
 import discoverShop from '@components/discover/discover_shop/shop'
 import discoverInformation from '@components/discover/discover_information/information'
+=======
+import discoverBanner from '@components/discover_banner/banner'
+import discoverShop from '@components/discover_shop/shop'
+import discoverInformation from '@components/discover_information/information'
+>>>>>>> tsh
 export default {
     name:"Discover",
     components:{

@@ -6,6 +6,14 @@ const server = axios.create({
 })
 
 server.interceptors.request.use((config)=>{
+<<<<<<< HEAD
+=======
+    // if(config.method == "post"){
+    //     config.data = config.data;
+    // }else if(config.method == "get"){
+    //     config.params = {...config.params};
+    // }
+>>>>>>> tsh
     return config;
 },(e)=>{
     return Promise.reject(e);

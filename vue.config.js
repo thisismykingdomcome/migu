@@ -3,7 +3,11 @@ const path = require("path");
 module.exports = {
     devServer:{
         proxy:{
+<<<<<<< HEAD
             "/api":{
+=======
+            "/publish":{
+>>>>>>> tsh
                 target:"http://movie.miguvideo.com",
                 changeOrigin:true
             }
