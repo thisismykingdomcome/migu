@@ -1,20 +1,25 @@
-import mainContent from "../../components/main/mainContent.vue"
-import watchMovie from "../../components/watchMovie/watchMovie.vue"
-import FP from "../../views/firstpage/firstPage.vue"
+
 export default {
     path:'/FP',
     name:"FP",
-    component:FP,
+    component:() => import("../../views/firstpage/firstPage.vue"),
+    meta:{flag:true},
     children:[
         {
             path:"/watchMovie",
-            name:"/watchMovie",
-            component:() => {"../../components/watchMovie/watchMovie.vue"}
+            name:"watchMovie",
+            component:() => import("../../components/watchMovie/watchMovie.vue"),
+            meta:{
+                flag:true
+            }
         },
         {
             path:"/mainContent",
-            name:"/mainContent",
-            component:() => {"../../components/main/mainContent.vue"}
+            name:"mainContent",
+            component:() => import("../../components/main/mainContent.vue"),
+            meta:{
+                flag:false
+            }
         }
     ]
 }

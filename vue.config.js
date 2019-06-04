@@ -4,10 +4,17 @@ module.exports = {
     devServer:{
         proxy:{
             "/api":{
+<<<<<<< HEAD
                 target:"http://movie.miguvideo.com",
                 changeOrigin:true,
                 pathRewrite:{//必填
                     "^/api":"/"
+=======
+                target:"http://movie.miguvideo.com/lovev",
+                changeOrigin:true,
+                pathRewrite:{//这里必填
+                    "^/api":'/'
+>>>>>>> zdw
                 }
             }
         }
