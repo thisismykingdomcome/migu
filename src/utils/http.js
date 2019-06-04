@@ -10,7 +10,6 @@ server.interceptors.request.use((config)=>{
     config.headers = {//设置请求头部
         'Content--Type':'application/x-www-form-urlencoded;charset=UTF-8'
     }
-
     return config;
 },(e)=>{
     return Promise.reject(e);

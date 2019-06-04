@@ -9,12 +9,15 @@
 
 <script>
 import BScroll from "better-scroll"
-import Top from "@common/top/top"
+import Top from "../../common/top/top"
+import watchMovie from "../../components/watchMovie/watchMovie"
+import mainContent from "../../components/main/mainContent"
 export default {
     name:"FP",
     components: {
-        Top
-       
+        Top,
+        mainContent,
+        watchMovie
     },
     
 }
