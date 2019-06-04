@@ -6,11 +6,11 @@ fieldset, c{ border:none; }
 
 img{display: block;}
 
-address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+address, caption, cite, code, dfn, th, var, i { font-style:normal; font-weight:normal; }
 
 ul, ol ,li{ list-style:none; }
 
-body { color:#333; font:12px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;}
+body { color:#333; font:12px 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif; background:#fff;}
 
 a { color:#666; text-decoration:none; }
 /*清除浮动*/
