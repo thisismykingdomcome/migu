@@ -5,7 +5,10 @@ module.exports = {
         proxy:{
             "/api":{
                 target:"http://movie.miguvideo.com",
-                changeOrigin:true
+                changeOrigin:true,
+                pathRewrite:{//必填
+                    "^/api":"/"
+                }
             }
         }
     },

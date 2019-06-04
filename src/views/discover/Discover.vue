@@ -36,6 +36,14 @@ export default {
         discoverBanner,
         discoverShop,
         discoverInformation
+    },
+    methods:{
+        ...Vuex.mapActions({
+            discoverData:"discover/discoverData"
+        })
+    },
+    created(){
+        this.discoverData();
     }
    
 

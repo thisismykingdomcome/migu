@@ -3,9 +3,9 @@
         <!-- 模块一动画图 -->
         <div class="banner_animation">
             <ul>
-                <li>
+                <li v-for="(itm,index) in animation" :key="index">
                     <a href="#">
-                    <img src="http://movie.miguvideo.com/publish/i_www/image/70/749/526.jpg" alt="">
+                    <img :src="'http://movie.miguvideo.com/publish/i_www/' + itm.imgSrc" alt="">
                     </a>
                 </li>
             </ul>
@@ -13,10 +13,10 @@
         <!-- 模块一菜单栏 -->
         <div class="banner_menu">
             <ul class="clearfix">
-                <router-link v-for="(item,index) in menus" :key="index" :to="item.path" tag="li">
-                    <img :src="item.iconimg" alt="">
-                    <span>{{item.title}}</span>
-                </router-link>
+                <li v-for="(item,index) in menus" :key="index" >
+                    <img :src="'http://movie.miguvideo.com/publish/i_www/' + item.imgSrc" alt="">
+                    <span>{{item.name}}</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -27,37 +27,12 @@
 import Vuex from 'vuex'
 export default {
     name:"discoverBanner",
-     data(){
-        return {
-            menus:[
-                    {
-                        title:"资讯",
-                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/960.png",
-                        path:"/informations"
-                    },
-                    {
-                        title:"话题",
-                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/961.png",
-                        path:"/"
-                    },
-                    {
-                        title:"约票",
-                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/949.png",
-                        path:"/"
-                    },
-                    {
-                        title:"商城",
-                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/962.png",
-                        path:"/shopping"
-                    },
-                    {
-                        title:"活动",
-                        iconimg:"http://movie.miguvideo.com/publish/i_www/image/70/175/966.png",
-                        path:"/"
-                    }
-                ]
-        }
-    },
+    computed:{
+        ...Vuex.mapState({
+            animation:state=>state.discover.discover_banner,
+            menus:state=>state.discover.discover_menu
+        })
+    } 
 }
 </script>
 

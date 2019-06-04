@@ -87,7 +87,7 @@ header{
     
 }
 .a>span{
-    display:inline-block;
+    display:block;
     padding-top:0.1rem;
     color:black;
     font-size:0.3rem;
