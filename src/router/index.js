@@ -5,6 +5,7 @@ import discoverShopping from './shopping'
 import homePage from "./homePage/index"
 import search from './search'
 import informations from './informations'
+import watchMovie from './watchMovie/watchMovie'
 Vue.use(Router)
 
 export default new Router({
@@ -18,6 +19,7 @@ export default new Router({
     discoverShopping,
     homePage,
     search,
-    informations
+    informations,
+    watchMovie
   ]
 })

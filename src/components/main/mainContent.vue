@@ -1,14 +1,13 @@
 <template>
+
 <div id="zzz">
     <div id="main">
         <div id="one">
-            <div class="one">
-                <ul>
-                    <li><a href="#" ><img src="'http://movie.miguvideo.com/publish/i_www'+this.$store.state.zdw.mainData[0].list[0].imgSrc" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate02.jpeg" alt=""></a></li>
+            <div class="one swiper-container" >
+                <ul class="swiper-wrapper" >
+                    <li class="swiper-slide" style="width:3.75rem" v-for="item in loopPic" :key="item.imgSrc"><a href="#" >
+                        <img v-lazy="'http://movie.miguvideo.com/publish/i_www'+ item.imgSrc" alt="">
+                    </a></li>
                 </ul>
             </div>
         </div>
@@ -16,54 +15,12 @@
             <h1>正在售票</h1>
             <div id="better">
                 <ul>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
-                    <li><a href=""><img src="../../../public/imgers/img-zdw/fate11.jpg" alt="">
-                        <p>撒大声地撒地方撒大</p>
-                        <p>阿士大夫撒打算的发生</p>
-                    </a></li>
+                    <li v-for="(sell,index) in sellTicket" :key="index">
+                        <a href="#">
+                        <img :src="'http://movie.miguvideo.com/publish/i_www'+ sell.imgSrc" alt="">
+                        <p>{{sell.name}}</p>
+                        <p>{{sell.LONG_NAME}}</p>   
+                    </a></li>               
                 </ul>
             </div>
         </div>
@@ -71,9 +28,12 @@
             <h1>精彩活动</h1>
             <div id="better1">
                 <ul>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate37.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate37.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="../../../public/imgers/img-zdw/fate37.jpg" alt=""></a></li>
+                    <li v-for="(activity,index) in wonderfulActivity" :key="index">
+                        <a href="#">
+                            <img :src="'http://movie.miguvideo.com/publish/i_www'+ activity.imgSrc" alt="">
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -81,15 +41,25 @@
 
     </div>
 </div>
+
 </template>
 <script>
-import Vuex from "vuex"
+import Swiper from "swiper"
+import Vuex, { mapState } from "vuex"
 import BScroll from "better-scroll"
-import mainContent from "../../api/mainContent"
+import mainContent from "@api/mainContent"
+
 export default {
     name:"mainContent",
     created(){
-        this.actionsMain()
+        this.actionsMain();
+    },
+    computed:{ 
+        ...Vuex.mapState({
+        'loopPic': state => state.zdw.loopPic,
+        'sellTicket':state => state.zdw.sellTicket,
+        'wonderfulActivity':state => state.zdw.wonderfulActivity
+    })
     },
     mounted(){
         let FP = document.querySelector("#zzz");
@@ -102,16 +72,52 @@ export default {
         let scroll2 = new BScroll(better1,{
             scrollX:true
         });  
-        //console.log(this.$store.state.zdw.mainData[0][0].list)
+        this.$nextTick(function(){
+            var mySwiper = new Swiper('.swiper-container',{
+            autoplay:{
+                disableOnInteraction:false, 
+            }, 
+            delay:1000,
+            
+            width:1125 ,
+            effect : 'coverflow',
+            slidesPerView: 3,
+            centeredSlides: true,
+            coverflowEffect: {
+            rotate: 30,
+            stretch: 30,
+            depth: 60,
+            modifier: 2,
+            slideShadows : true
+            } ,
+            })
+        })
+        
     },
     methods: {
         ...Vuex.mapActions({
             actionsMain:"zdw/actionsMainOne"
         })
+    },
+    activated(){
+        console.log(this)
+    },
+    deactivated(){
+        console.log("main deactivated")
     }
 }
 </script>
 <style scoped>
+.mainslide-enter-active {
+    transition: all 1s ease;
+}
+.mainslide-enter-leave-active {
+    transition: all 2s cubic-bezier(1.0,0.5,0.8,1.0);
+}
+.mainslide-enter,.mainslide-leave-to{
+    transform:translateX(0.1rem);
+    opacity:0;
+}
 #zzz{
     width:100%;
     overflow: hidden;
@@ -119,34 +125,47 @@ export default {
     margin-top:1.67rem
 }
 #main{
-    margin-top:1.67rem;
+    /* margin-top:1.67rem; */
     width:100%;
     
     background:#efefef;
 }
 #one{
     width:100%;
-    background:pink
+
 }
 .one{
     padding-top:0.6rem;
     padding-bottom:0.6rem;
     overflow: hidden;
+    width:100%;
+    position: relative;
+    height:100%;
+    /*   */
+    margin:0 auto
+   
 }
 .one ul{
-    width:max-content;
+    white-space:nowrap;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+    left:-2rem;
+    margin:0 auto
 }
 .one ul li{
     width:3.75rem;
-    float:left;
+    display: inline-block;
+   
 }
 .one ul li img{
-    width:100%;
-    height:5.555rem;
+    width:3.75rem;
+    position: relative;
 }
 #two,#three{
     width:100%;
     margin-bottom: 0.2rem;
+    background-color:white;
 }
 #two h1,#three h2{
     height:0.9rem;
@@ -190,7 +209,7 @@ export default {
 #three ul{
     overflow: hidden;
     display: flex;
-    width:22.5rem;
+    width:max-content;
 }
 #three ul li{
     float:left;
@@ -199,6 +218,7 @@ export default {
 }
 #three ul li img{
     width:100%;
+    height:2.8rem;
     border:none;
 }
 </style>

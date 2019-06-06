@@ -19,13 +19,16 @@
 
         <div class="down">
             <div class="d-left ">
+            <BScroll>
                 <ul class="d-list" >
-                        <li @click="getColor(index)" v-for="(item,index) in items"  :key="index" :class="activeIndex == index?active : ''">{{item}}</li>
+                        <router-link  tag="li" :to="item.link" @click="getColor(index)" v-for="(item,index) in items"
+                          :key="index" :class="activeIndex == index?active : ''">{{item.name}}</router-link>
                         <!-- <li @click="getColor">免费看片</li>
                         <li @click="getColor">影单</li>
                         <li @click="getColor">小视频</li>
                         <li @click="getColor">影评</li> -->
                 </ul>
+            </BScroll>
             </div>
             <div class="d-right">
                 <a href="#">
@@ -38,22 +41,27 @@
 </template>
 
 <script>
+import BScroll from "@common/BScroll/BScroll.vue"
+
 export default {
     name:'Top',
     data(){
         return {
-            activeIndex:0,
+            activeIndex:this.$route.meta.flag,
             items: [
-                '推荐','免费看片','影单','小视频','影评'
+                {name:'推荐',link:"/FP"},{name:'免费看片',link:"/watchMovie"},
+                {name:'影单',link:"/FP"},{name:'小视频',link:"/watchMovie"},{name:'影评',link:"/FP"}
             ],
             active:'active'
         }
     },
     methods: {
         getColor(index){
-            console.log(this)
-            this._data.activeIndex = index
+            
         }
+    },
+    components:{
+        BScroll
     }
 }
 </script>
@@ -65,6 +73,7 @@ header{
     left:0;
     width:100%;
     z-index: 11111;
+    background:white
 }
 .top{
     width:100%;

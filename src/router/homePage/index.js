@@ -2,21 +2,22 @@
 export default {
     path:'/FP',
     name:"FP",
-    component:() => import("../../views/firstpage/firstPage.vue"),
-    meta:{flag:true},
+    component:() => import("@views/firstpage/firstPage.vue"),
+    meta:{flag:0},
+    props:true,
     children:[
         {
-            path:"/watchMovie",
+            path:"watchMovie",
             name:"watchMovie",
-            component:() => import("../../components/watchMovie/watchMovie.vue"),
+            component:() => import("@components/watchMovie/watchMovie.vue"),
             meta:{
-                flag:true
+                flag:false
             }
         },
         {
-            path:"/mainContent",
+            path:"mainContent",
             name:"mainContent",
-            component:() => import("../../components/main/mainContent.vue"),
+            component:() => import("@components/main/mainContent.vue"),
             meta:{
                 flag:false
             }

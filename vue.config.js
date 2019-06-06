@@ -8,7 +8,6 @@ module.exports = {
                 changeOrigin:true,
                 pathRewrite:{//必填
                     "^/api":"/"
-
                 }
             }
         }

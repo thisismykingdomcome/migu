@@ -4,7 +4,8 @@ import router from './router'
 import store from './store'
 import axios from "axios"
 import BScroll from '@common/BScroll/BScroll'
-
+import VueLazyload from "vue-lazyload"
+Vue.use(VueLazyload)
 Vue.prototype.$axios = axios;
 // axios.defaults.baseURL ="/api";//方法二：这里不写，下面的响应头设置就无效.
 // axios.defaults.headers.post['Content-Type'] = 'application/json';//方法二
