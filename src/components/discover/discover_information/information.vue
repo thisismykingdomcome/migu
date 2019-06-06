@@ -16,14 +16,12 @@
                   <div class="module_content">
                      <ul>
                         <li v-for="(event,index) in item.picList[0].list" :key="index">
-                           <a href="#">
-                              <div class="article_top">
+                            <v-touch class="article_top" tag="div" @tap="skipDetails(event.SRC_CONT_ID)">
                                  <div class="article_left">{{event.name}}</div>
                                  <div class="article_right">
                                     <img class="lazy" alt="" :src="'http://movie.miguvideo.com/' + event.imgSrcH">
                                  </div>
-                              </div>
-                           </a>
+                            </v-touch>
                            <div class="article_bottom">
                               <div class="article_from">来源：时光网</div>
                               <div class="article_praise">
@@ -51,7 +49,12 @@ export default {
           iformation:state=>state.discover.discover_information
         }),
     },
-
+    methods:{
+       
+        skipDetails(id){
+            this.$router.push({name:"details",params:{movieId:id}})
+        }
+    },
 }
 
 

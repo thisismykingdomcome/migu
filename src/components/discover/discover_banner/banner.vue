@@ -24,7 +24,7 @@
 
 
 <script>
-import Swiper from 'swiper';
+import Swiper from 'swiper';//引入动画插件
 import 'swiper/dist/css/swiper.min.css';
 import Vuex from 'vuex'
 export default {
@@ -51,6 +51,9 @@ export default {
         })
        /*  console.log(window.sessionStorage) */
     },
+  
+   
+  
     computed:{
         
         ...Vuex.mapState({

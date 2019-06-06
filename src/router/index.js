@@ -4,6 +4,7 @@ import discover from "./discover"
 import discoverShopping from './shopping'
 import search from './search'
 import informations from './informations'
+import newDetail from './information_newDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +17,7 @@ export default new Router({
     discover,
     discoverShopping,
     search,
-    informations
+    informations,
+    newDetail
   ]
 })

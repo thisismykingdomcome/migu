@@ -1,6 +1,6 @@
 import {
     discoverData,
-    discoverInformationData
+    discoverMovieDetails
 } 
 from "@api/discover"
 
@@ -10,9 +10,9 @@ export default{
         
         commit("mutationsDiscoverData",data)
     },
-   /*  async discoverInformation({commit}){
-        let data = await discoverInformationData();
+    async NewDetails({commit}){
+        let data = await discoverMovieDetails();
         console.log(data)
         commit("informationData",data)
-    } */
+    }
 }
