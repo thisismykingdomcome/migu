@@ -5,14 +5,15 @@
     <div id="watchMovie">
         <div class="loopPic swiper-container">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide" v-for="item in watchOne" :key="item.imgSrc">
+                <li class="swiper-slide" v-for="(item,index) in watchOne" :key="index">
                     <a href="#">
-                        <img v-lazy="'http://movie.miguvideo.com/publish' + item.imgSrc" alt="">
+                        <img :src="'http://movie.miguvideo.com/publish' + item.imgSrc" alt="">
                         <span>{{item.name}}</span>
                     </a>
                 </li>
             </ul>
-            <div id="fyq" class="swiper-pagination"></div>
+            <div  class="fyq swiper-pagination"></div>
+  
         </div> 
         <div id="two">
                 <h1>热门推荐(免费)</h1>
@@ -72,7 +73,7 @@ export default {
                 autoplay: {
                             disableOnInteraction: false,
                 },
-
+                width:750,
                 pagination: {
                     el: '.swiper-pagination',
                 },
@@ -103,24 +104,29 @@ export default {
 }
 </script>
 <style scoped>
-#fyq{
+.fyq{
     width:0.3rem;
     height:0.3rem;
     border-radius: 50%;
-
+position:absolute;
+background:white;
+left:50%;
+bottom:0;
 }
 #zzz{
     width:100%;
     height:11.7rem
 }
 #watchMovie{
-    margin-top: 1.7rem
+    margin-top: 1.7rem;
+    
 }
 .loopPic{
     width:100%;
     height:auto;
     box-sizing:border-box;
     overflow: hidden;
+    position: relative;
 }
 .loopPic ul{
     

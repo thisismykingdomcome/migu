@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import Router from "vue-router";
-import discover from "./discover"
-import discoverShopping from './shopping'
+
 import homePage from "./homePage/index"
-import search from './search'
-import informations from './informations'
+
 import watchMovie from './watchMovie/watchMovie'
 Vue.use(Router)
 
@@ -15,11 +13,9 @@ export default new Router({
       path:"/",
       redirect:"/FP"
     },
-    discover,
-    discoverShopping,
+    
     homePage,
-    search,
-    informations,
+    
     watchMovie
   ]
 })

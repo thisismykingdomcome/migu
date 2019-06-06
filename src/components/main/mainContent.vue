@@ -5,8 +5,9 @@
         <div id="one">
             <div class="one swiper-container" >
                 <ul class="swiper-wrapper" >
-                    <li class="swiper-slide" style="width:3.75rem" v-for="item in loopPic" :key="item.imgSrc"><a href="#" >
-                        <img v-lazy="'http://movie.miguvideo.com/publish/i_www'+ item.imgSrc" alt="">
+                    <li class="swiper-slide" style="width:3.75rem" v-for="(item,index) in loopPic" :key="index"><a href="#" >
+                        <img :src="'http://movie.miguvideo.com/publish/i_www'+ item.imgSrc" 
+                         alt="">
                     </a></li>
                 </ul>
             </div>
@@ -17,7 +18,7 @@
                 <ul>
                     <li v-for="(sell,index) in sellTicket" :key="index">
                         <a href="#">
-                        <img :src="'http://movie.miguvideo.com/publish/i_www'+ sell.imgSrc" alt="">
+                        <img class="swiper-lazy" :src="'http://movie.miguvideo.com/publish/i_www'+ sell.imgSrc" alt="">
                         <p>{{sell.name}}</p>
                         <p>{{sell.LONG_NAME}}</p>   
                     </a></li>               
@@ -74,22 +75,26 @@ export default {
         });  
         this.$nextTick(function(){
             var mySwiper = new Swiper('.swiper-container',{
-            autoplay:{
-                disableOnInteraction:false, 
-            }, 
-            delay:1000,
-            
-            width:1125 ,
-            effect : 'coverflow',
-            slidesPerView: 3,
-            centeredSlides: true,
-            coverflowEffect: {
-            rotate: 30,
-            stretch: 30,
-            depth: 60,
-            modifier: 2,
-            slideShadows : true
-            } ,
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                effect : 'coverflow',
+                slidesPerView: 3,
+                centeredSlides: true,
+                lazyLoading : true,
+                observer:true,
+                observeParents:true,
+                width:1125 ,               
+                coverflowEffect: {
+                    rotate: 40,
+                    stretch: 30,
+                    depth: 60,
+                    modifier: 2,
+                    slideShadows : true
+                } ,
+                onSlideChangeEnd: function(swiper){ 
+                    swiper.update() 
+                },
             })
         })
         
@@ -122,7 +127,7 @@ export default {
     width:100%;
     overflow: hidden;
     height:11.7rem;
-    margin-top:1.67rem
+    margin-top:1.67rem;
 }
 #main{
     /* margin-top:1.67rem; */
@@ -141,22 +146,23 @@ export default {
     width:100%;
     position: relative;
     height:100%;
-    /*   */
+    
     margin:0 auto
    
 }
 .one ul{
     white-space:nowrap;
     height:100%;
+    width:max-content;
     overflow: hidden;
     position: relative;
     left:-2rem;
     margin:0 auto
 }
 .one ul li{
-    width:3.75rem;
+    width:max-content;
     display: inline-block;
-   
+    
 }
 .one ul li img{
     width:3.75rem;

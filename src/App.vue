@@ -23,7 +23,7 @@
         }else{
           this._data.fade = "slide-right"
         } 
-        console.log(this._data.fade)
+        
       }
     },
   }
