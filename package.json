@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "migumovie",
+=======
+  "name": "maoyan",
+>>>>>>> tshs
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +17,10 @@
     "mint-ui": "^2.2.13",
     "swiper": "^4.5.0",
     "vue": "^2.6.10",
+<<<<<<< HEAD
     "vue-awesome-swiper": "^3.1.3",
+=======
+>>>>>>> tshs
     "vue-router": "^3.0.3",
     "vue-touch": "^2.0.0-beta.4",
     "vuex": "^3.0.1"
@@ -21,7 +28,10 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
+<<<<<<< HEAD
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
+=======
+>>>>>>> tshs
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-lazyload": "^1.2.6",

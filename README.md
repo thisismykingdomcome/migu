@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 咪咕影院
+=======
+# maoyan
+>>>>>>> tshs
 
 ## 技术要点
 ```
@@ -14,8 +18,17 @@
 10、封装JS组件
 11、封装UI组件
 12、sass 
+<<<<<<< HEAD
 13、axios
 
 dev 分支
+=======
+
+
+cnpm install better-scroll swiper mint-ui vue-touch@next -S
+
+
+cnpm install vue-lazyload -D
+>>>>>>> tshs
 ```
 
