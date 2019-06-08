@@ -11,13 +11,9 @@
         mounted(){
             this.scroll = new BScroll(this.$refs.wrapper,{
                 probeType:1,
-<<<<<<< HEAD
                 scrollX:true,
                 click:true
 
-=======
-                scrollX:true
->>>>>>> tshs
                 // pullUpLoad:true
             });
 
