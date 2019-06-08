@@ -43,12 +43,12 @@ export default {
     },
     methods:{
         ...Vuex.mapActions({
-            discoverData:"discover/discoverData"
+            discoverData:"discover/discoverData" //从actions引入函数discoverData
         }),
         
     },
     created(){
-        this.discoverData();
+        this.discoverData();  //执行函数discoverData
     },
     mounted() {
       this.$nextTick(() => {

@@ -13,10 +13,10 @@
         <!-- 模块一菜单栏 -->
         <div class="banner_menu">
             <ul class="clearfix">
-                <li v-for="(item,index) in menus" :key="index" >
+                <router-link v-for="(item,index) in menus" :key="index" tag='li' :to='item.link'>
                     <img v-if="item.imgSrc !== undefined" :src="'http://movie.miguvideo.com/publish/i_www/' + item.imgSrc" alt="">
                     <span>{{item.name}}</span>
-                </li>
+                </router-link>
             </ul>
         </div>
     </div>
@@ -51,9 +51,9 @@ export default {
         })
        /*  console.log(window.sessionStorage) */
     },
-  
-   
-  
+    methods:{
+
+    },
     computed:{
         
         ...Vuex.mapState({

@@ -1,7 +1,8 @@
 export default{
     mutationsDiscoverData(state,params){
 
-        var information = params[3].list //把数据转化成年月日
+        //把数据转化成年月日
+        var information = params[3].list 
         for(var i=0,len = information.length ; i<len ; i++){
             var date = information[i].name.split('');
             date.splice(4,0,'年')
@@ -9,6 +10,34 @@ export default{
             date.push("日")
             information[i].name = date.join('')
         }
+
+        //给数据添加一个跳转地址
+        function gitmenulink(){
+            var menuSrc = params[1].list;
+            const menuslink = [
+                {
+                path:"/informations",
+                },
+                {
+                path:"/",
+                },
+                {
+                path:"/",
+                },
+                {
+                path:"/shopping",
+                },
+                {
+                path:"/",
+                },
+            ]
+            for(var j=0,l=menuSrc.length;j<l;j++){
+                menuSrc[j].link = menuslink[j].path;
+            }
+            params[1].list = menuSrc;
+    
+        }
+        gitmenulink()
 
         state.discover_banner = params[0].list;
         state.discover_menu = params[1].list;
@@ -20,6 +49,8 @@ export default{
         window.sessionStorage.setItem("discover_information",JSON.stringify(params[3].list));
     },
     informationData(state,params){
-        state.informations = params[0]
+        
+        state.informationsData = params[0]
+        window.sessionStorage.setItem("discover_informationsData",JSON.stringify(params[0]));
     }
 }

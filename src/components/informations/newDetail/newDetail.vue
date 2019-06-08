@@ -7,7 +7,7 @@
     <div class="content">
         <banner title="中国内地10月影视" />
         <div class="page_head">
-            <h4>《寄生虫》连续六天夺韩国票房冠军</h4>
+            <h4>{{detailData.title}}</h4>
             <div class="page_from">
                 <span class="pull_left">新浪微博</span>
                 <span class="pull_right">2019-06-05 16:59:14</span>
@@ -91,22 +91,33 @@ export default {
     components:{
         banner
     },
+
+
+    created(){
+        this.NewDetails(this.movieId); //进入页面，触发此函数，往函数传电影ID，actions.js接收
+       
+    },
     methods:{
-         ...Vuex.mapActions({
-            NewDetails:'discover/NewDetails'
+        ...Vuex.mapActions({
+            NewDetails:'discover/NewDetails'  //从actions引入newDetails函数
         })
     },
-    actived(){
-        this.NewDetails(this.movieId);
+    computed:{
+        ...Vuex.mapState({
+            detailData:state=>state.discover.informationsData
+        })
+
     },
     mounted(){
         this.$nextTick(()=>{
             this.scroll = new betterScroll(this.$refs.wrapper, {
-                click:true, //设置可点击
+            click:true, //设置可点击
             })
         })
     }
 }
+
+
 </script>
 
 

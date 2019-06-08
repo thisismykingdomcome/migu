@@ -10,8 +10,8 @@ export default{
         
         commit("mutationsDiscoverData",data)
     },
-    async NewDetails({commit}){
-        let data = await discoverMovieDetails();
+    async NewDetails({commit},params){
+        let data = await discoverMovieDetails(params);
         console.log(data)
         commit("informationData",data)
     }

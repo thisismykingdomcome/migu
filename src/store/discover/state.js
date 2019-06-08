@@ -6,5 +6,7 @@ export default {
     discover_menu:JSON.parse(window.sessionStorage.getItem("discover_menu")) || [],
     discover_information:JSON.parse(window.sessionStorage.getItem("discover_information")) || [],
     discover_shop: JSON.parse(window.sessionStorage.getItem("discover_shop")) || [] ,
-    informations:[]
+    informationsData:JSON.parse(window.sessionStorage.getItem("discover_informationsData")) || {},
+
+    
 }
