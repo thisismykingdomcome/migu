@@ -5,15 +5,20 @@
           <router-view></router-view>
         </transition>
       </keep-alive>
+      <TabBar v-if="$route.meta.TabBarFlag"/>
   </div>
 </template>
 <script>
+import TabBar from "@common/BuyTicket/tabBar/tabbar";
   export default {
     name:"App",
     data(){
       return {
         fade: ""
       }
+    },
+    components:{
+      TabBar
     },
     watch:{
       $route(to,from) {

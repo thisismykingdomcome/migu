@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # 咪咕影院
-=======
-# maoyan
->>>>>>> tshs
-=======
-# maoyan
->>>>>>> zdws
 
 ## 技术要点
 ```
@@ -22,23 +15,14 @@
 10、封装JS组件
 11、封装UI组件
 12、sass 
-<<<<<<< HEAD
-<<<<<<< HEAD
 13、axios
 
 dev 分支
-=======
-=======
->>>>>>> zdws
 
 
 cnpm install better-scroll swiper mint-ui vue-touch@next -S
 
 
 cnpm install vue-lazyload -D
-<<<<<<< HEAD
->>>>>>> tshs
-=======
->>>>>>> zdws
-```
+
 

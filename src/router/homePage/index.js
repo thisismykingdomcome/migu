@@ -3,7 +3,10 @@ export default {
     path:'/FP',
     name:"FP",
     component:() => import("@views/firstpage/firstPage.vue"),
-    meta:{flag:0},
+    meta:{
+        flag:0,
+        TabBarFlag:true,
+    },
     props:true,
     children:[
         {
