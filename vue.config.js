@@ -6,7 +6,7 @@ module.exports = {
             "/api":{
                 target:"http://movie.miguvideo.com",
                 changeOrigin:true,
-                pathRewrite:{
+                pathRewrite:{//必填
                     "^/api":"/"
                 }
             }
@@ -20,7 +20,8 @@ module.exports = {
                 "@api" : path.resolve(__dirname,"./src/api"),
                 "@components" : path.resolve(__dirname,"./src/components"),
                 "@utils" : path.resolve(__dirname,"./src/utils"),
-                "@views":path.resolve(__dirname,"./src/views")
+                "@views":path.resolve(__dirname,"./src/views"),
+                "@public":path.resolve(__dirname,"./public")
             }
         }
     }

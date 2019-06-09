@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from "vue-router";
-
 import discover from "./discover"
 import discoverShopping from './shopping'
 import search from './search'
@@ -8,6 +7,8 @@ import informations from './informations'
 import newDetail from './information_newDetail'
 import BuyTicket from "./BuyTicket"
 import cinemaSearch from "./cinemaSearch"
+import homePage from "./homePage/index"
+import watchMovie from './watchMovie/watchMovie'
 Vue.use(Router)
 
 export default new Router({
@@ -23,8 +24,8 @@ export default new Router({
     informations,
     newDetail,
     cinemaSearch,
-    BuyTicket
-
-
+    BuyTicket,
+    homePage,
+    watchMovie
   ]
 })
