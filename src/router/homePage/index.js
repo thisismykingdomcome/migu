@@ -5,7 +5,7 @@ export default {
     component:() => import("@views/firstpage/firstPage.vue"),
     meta:{
         flag:0,
-        TabBarFlag:true,
+        TabBarFlag:true
     },
     props:true,
     children:[

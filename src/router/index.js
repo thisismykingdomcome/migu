@@ -12,11 +12,11 @@ import watchMovie from './watchMovie/watchMovie'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path:"/",
-      redirect:"/discover"
+      redirect:"/FP"
     },
     discover,
     discoverShopping,

@@ -3,5 +3,8 @@ export default{
     path:"/watchMovie",
     name:"wactchMovie",
     component:() => import("@components/watchMovie/watchMovie.vue"),
-    meta:{flag:1}
+    meta:{
+        flag:1,
+        TabBarFlag:true
+    }
 }

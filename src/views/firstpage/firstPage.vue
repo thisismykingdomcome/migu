@@ -11,9 +11,9 @@
 <script>
 import Vuex from "vuex"
 import BScroll from "better-scroll";
-import Top from "../../common/top/top";
-import mainContent from "../../components/main/mainContent" ;
-import {mainContent1} from '../../api/mainContent';
+import Top from "@common/top/top";
+import mainContent from "@components/main/mainContent" ;
+import {mainContent1} from '@api/mainContent';
 export default {
     name:"FP",
     components: {
