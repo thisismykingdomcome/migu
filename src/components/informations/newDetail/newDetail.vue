@@ -147,12 +147,13 @@ export default {
         font-size: 0.24rem;
         color: #999;
         padding: 0.2rem;
+        display:block;
 
         .pull_left{
-            float: left;
+          
         }
 
-         .pull_right{
+        .pull_right{
             float: right;
         }
     }
@@ -160,12 +161,16 @@ export default {
     .article_wrap{
         padding: 0 0.2rem;
         font-size: 0.32rem;
+        position: relative;
     }
-    .article_wrap p {
+    .article_wrap p{
         font-size: 0.32rem;
-        
     }
-
+    .article_wrap em{
+        font-size: 0.32rem;
+        display: block;
+    }
+    
 }
 
 .have_lick{
