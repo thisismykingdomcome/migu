@@ -10,16 +10,10 @@
             <h4>{{detailData.title}}</h4>
             <div class="page_from">
                 <span class="pull_left">新浪微博</span>
-                <span class="pull_right">2019-06-05 16:59:14</span>
+                <span class="pull_right">{{detailData.CreateTime}}</span>
             </div>
-            <div class="article_wrap" style="padding: 0 10px;">
-                <p>
-                    <img src="http://117.131.18.44/store_sjq/zhengshi/1003/518/279/1003518279/display/1_TW_001_sc.jpg"
-                        alt="" width="100%" height="auto">
-                </p><br>
-                <p>   宋康昊主演的《寄生虫》连续六天夺得韩国票房冠军，总观影人数顺利突破了400万大关。</p><br>
-                <p>　 据韩国电影振兴委员会今天发布的最新数据，《寄生虫》昨天在韩国动员了34万8736名观众，名列票房榜第一位。《寄生虫》上个月30日上映至今已动员409万8103名观众。</p>
-                <br>　迪斯尼真人电影《阿拉丁》昨天动员8万4803名观众，名列票房榜第二位，韩国电影《恶人传》以1万7653名的观影人数排在了第三位。
+            <div class="article_wrap" style="padding: 0 10px;" v-html="detailData.Detail">
+               
             </div>
             <div class="have_lick">
                 <button type="button" onclick="Fabulous1(this,5)">
@@ -112,11 +106,19 @@ export default {
         this.$nextTick(()=>{
             this.scroll = new betterScroll(this.$refs.wrapper, {
             click:true, //设置可点击
+
             })
+        let t = document.getElementsByTagName('img'); //获取img 标签集合
+        console.log(t);
+        for(var i=1;i<t.length;i++){ //删除自带的height 和width 属性
+            t[i].style = 'width:100%;height:auto;' ;
+            t[i].removeAttribute('height') ;
+            t[i].removeAttribute('width') ;
+        }
         })
+        
     }
 }
-
 
 </script>
 
@@ -161,10 +163,10 @@ export default {
     }
     .article_wrap p {
         font-size: 0.32rem;
+        
     }
 
 }
-
 
 .have_lick{
     margin-top: 0.2rem ;

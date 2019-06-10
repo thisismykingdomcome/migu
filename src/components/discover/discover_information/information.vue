@@ -62,6 +62,9 @@ export default {
 
 
 <style lang="scss" scoped>
+.information{
+    padding-bottom: 1.02rem;
+}
 
 /* 资讯模块 */
 .information_module{
