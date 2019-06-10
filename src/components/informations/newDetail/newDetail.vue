@@ -13,7 +13,7 @@
                 <span class="pull_right">{{detailData.CreateTime}}</span>
             </div>
             <div class="article_wrap" style="padding: 0 10px;" v-html="detailData.Detail">
-                
+               
             </div>
             <div class="have_lick">
                 <button type="button" onclick="Fabulous1(this,5)">
@@ -106,12 +106,19 @@ export default {
         this.$nextTick(()=>{
             this.scroll = new betterScroll(this.$refs.wrapper, {
             click:true, //设置可点击
+
             })
+        let t = document.getElementsByTagName('img'); //获取img 标签集合
+        console.log(t);
+        for(var i=1;i<t.length;i++){ //删除自带的height 和width 属性
+            t[i].style = 'width:100%;height:auto;' ;
+            t[i].removeAttribute('height') ;
+            t[i].removeAttribute('width') ;
+        }
         })
         
     }
 }
-
 
 </script>
 
@@ -156,10 +163,10 @@ export default {
     }
     .article_wrap p {
         font-size: 0.32rem;
+        
     }
 
 }
-
 
 .have_lick{
     margin-top: 0.2rem ;

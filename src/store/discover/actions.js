@@ -12,7 +12,6 @@ export default{
     },
     async NewDetails({commit},params){
         let data = await discoverMovieDetails(params);
-        console.log(data)
         commit("informationData",data)
     }
 }
