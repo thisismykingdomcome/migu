@@ -66,9 +66,9 @@ export default {
         this.actionsMovie()
     },
     mounted(){
+        this.$nextTick(function(){
         let FP = document.querySelector("#zzz");
         let scroll =new BScroll(FP)
-        this.$nextTick(function(){
             var mySwiper = new Swiper('.swiper-container', {
                 autoplay: {
                             disableOnInteraction: false,

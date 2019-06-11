@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     /* 分化部分 */
     section{
         position: fixed;
