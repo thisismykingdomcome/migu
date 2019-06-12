@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-      <keep-alive>
         <transition :name="this._data.fade" >
+      <keep-alive>
           <router-view></router-view>
-        </transition>
       </keep-alive>
+        </transition>
       <TabBar v-if="$route.meta.TabBarFlag"/>
   </div>
 </template>

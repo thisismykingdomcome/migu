@@ -50,7 +50,7 @@ export default {
             activeIndex:this.$route.meta.flag,
             items: [
                 {name:'推荐',link:"/FP"},{name:'免费看片',link:"/watchMovie"},
-                {name:'影单',link:"/FP"},{name:'小视频',link:"/watchMovie"},{name:'影评',link:"/FP"}
+                {name:'影单',link:"/movieList"},{name:'小视频',link:"/smallVideo"},{name:'影评',link:"/filmReview"}
             ],
             active:'active'
         }
@@ -136,7 +136,7 @@ header{
     font-size:0.3rem;
     float:left;
     text-align:center;
-    width:8rem 
+    width:max-content 
 }
 .d-list li{
     width:1.6rem;

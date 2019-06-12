@@ -53,16 +53,18 @@ import mainContent from "@api/mainContent"
 export default {
     name:"mainContent",
     created(){
-        this.actionsMain();
+this.actionsMain();
     },
-    computed:{ 
-        ...Vuex.mapState({
-        'loopPic': state => state.zdw.loopPic,
-        'sellTicket':state => state.zdw.sellTicket,
-        'wonderfulActivity':state => state.zdw.wonderfulActivity
-    })
+    computed:{    
+            ...Vuex.mapState({
+            'loopPic': state => state.zdw.loopPic,
+            'sellTicket':state => state.zdw.sellTicket,
+            'wonderfulActivity':state => state.zdw.wonderfulActivity
+
+        })
+    
     },
-    mounted(){
+    mounted(){    
         let FP = document.querySelector("#zzz");
         let scroll = new BScroll(FP);
         let better =document.querySelector('#better');
@@ -73,7 +75,7 @@ export default {
         let scroll2 = new BScroll(better1,{
             scrollX:true
         });  
-        this.$nextTick(function(){
+        this.$nextTick(function(){    
             var mySwiper = new Swiper('.swiper-container',{
                 autoplay: {
                     disableOnInteraction: false,
@@ -105,7 +107,7 @@ export default {
         })
     },
     activated(){
-        console.log(this)
+        
     },
     deactivated(){
         console.log("main deactivated")
@@ -128,6 +130,7 @@ export default {
     overflow: hidden;
     height:11.7rem;
     margin-top:1.67rem;
+    padding-bottom:1rem
 }
 #main{
     /* margin-top:1.67rem; */

@@ -1,4 +1,4 @@
-import {mainContent1, watchContent} from "../../api/mainContent"
+import {mainContent1, watchContent,movieList,smallVideo,filmReview} from "../../api/mainContent"
 export default{
     async actionsMainOne({commit}){
       let data =  await mainContent1();
@@ -19,5 +19,23 @@ export default{
       // console.log(data[2].list);
       var arr = [data[0].list,data[1].list,data[2].list];
       commit('mutationsMovie',arr)
+    },
+    async actionsList({commit}){
+      let data = await movieList();
+      var arr = [data[0].list,data[1].list,data[2].list];
+      console.log(arr)
+      commit('mutationsMovieList',arr)
+    },
+    async actionsVideo({commit}){
+      let data = await smallVideo();
+      var arr = [data[1].list];
+      commit('mutationsVideo',arr)
+    },
+    async actionsFilm({commit}){
+      let data = await filmReview();
+      // console.log(data)
+      var arr = [data[0].list];
+      // console.log(arr)
+      commit('mutationsFilm',arr)
     }
 }
